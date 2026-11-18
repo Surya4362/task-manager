@@ -127,7 +127,7 @@ const $ = id => document.getElementById(id);
 const COLS = [['todo','To do','--todo'],['doing','Doing','--doing'],['done','Done','--done']];
 const NEXT = {todo:'doing',doing:'done',done:'todo'};
 const NEXT_LABEL = {todo:'Start',doing:'Mark done',done:'Reopen'};
-const DEFAULT_CATS = ['Campaigns','LinkedIn content','Job applications','Freelance','General'];
+const DEFAULT_CATS = ['Campaigns','LinkedIn content','Job applications','General'];
 let tasks = [], editingId = null, dragId = null;
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
