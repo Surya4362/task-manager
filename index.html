@@ -207,7 +207,7 @@ const COLS = [['todo','To do','--todo'],['doing','Doing','--doing'],['done','Don
 const NEXT = {todo:'doing',doing:'done',done:'todo'};
 const NEXT_LABEL = {todo:'Start',doing:'Mark done',done:'Reopen'};
 const PV = {high:'--high',medium:'--med',low:'--low'};
-const DEFAULT_CATS = ['Campaigns','LinkedIn content','Konnector.ai','Outreach','Reporting','General'];
+const DEFAULT_CATS = ['Campaigns','LinkedIn content','WarmGTm','Outreach','Reporting','General','Sales navigator prospecting'];
 let tasks = [], editingId = null, dragId = null, view = 'board', cal = new Date();
 cal.setDate(1);
 
@@ -311,7 +311,7 @@ const IC={edit:svg('<path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z
  rep:svg('<path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/>',12),cal:svg('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',12),
  chk:svg('<path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',12),plus:svg('<path d="M12 5v14M5 12h14"/>',14)};
 const DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const CATIDX={'Outreach':0,'Campaigns':1,'Reporting':2,'LinkedIn content':3,'Konnector.ai':4,'General':5};
+const CATIDX={'Outreach':0,'Campaigns':1,'Reporting':2,'LinkedIn content':3,'WarmGTM':4,'General':5,'Sales navigator prospecting':6,};
 const catCls=c=>'c'+(CATIDX[c]??([...c].reduce((a,ch)=>a+ch.charCodeAt(0),0)%6));
 const repLabel=t=>t.recurrence==='days'?[...(t.repeat_days||[])].sort((a,b)=>(a+6)%7-(b+6)%7).map(d=>DN[d]).join(', '):t.recurrence;
 function fmt(d){
